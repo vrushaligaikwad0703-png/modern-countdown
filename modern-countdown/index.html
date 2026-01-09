@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="themeToggle">🌗 Theme</button>
+
+    <div class="container">
+        <h1 class="title">⏳ Ultimate Countdown Timer</h1>
+
+        <div class="inputBox">
+            <label>Select Target Date & Time</label>
+            <input type="datetime-local" id="targetDateTime">
+        </div>
+
+        <button class="btn" onclick="startCountdown()">Start Countdown</button>
+        <button class="btn stop" onclick="stopAlarm()">Stop Alarm 🔕</button>
+
+        <div id="timerDisplay">
+            <div class="timeBox"><span id="days">00</span><p>Days</p></div>
+            <div class="timeBox"><span id="hours">00</span><p>Hours</p></div>
+            <div class="timeBox"><span id="minutes">00</span><p>Minutes</p></div>
+            <div class="timeBox"><span id="seconds">00</span><p>Seconds</p></div>
+        </div>
+
+        <h2 id="message"></h2>
+    </div>
+
+    <!-- Alarm Sound -->
+    <audio id="alarmSound" loop>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
